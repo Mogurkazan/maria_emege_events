@@ -6,24 +6,28 @@ Emege{% endblock %} {% block content %}
     Campañas, murales, arte en vivo y colaboraciones con grandes marcas.
   </p>
 
-  <div class="projects__grid">
-    <!-- Card de Proyecto -->
-    <article class="project-card">
-      <img
-        src="{% static 'img/projects/test1.jpg' %}"
-        alt="Residente"
-        class="project-card__img"
-      />
-      <div class="project-card__info">
-        <h2 class="project-card__title">
-          Tour <em>Las letras ya no importan</em>
-        </h2>
-        <p class="project-card__desc">painting live during the tour concerts</p>
-        <a href="#" class="project-card__link">More</a>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="project-card">
+          <img src="{% static 'img/projects/test1.jpg' %}" alt="Mural 1" />
+          <h3>Mural en evento de Adidas</h3>
+          <p>Live painting durante el lanzamiento de nuevas zapatillas.</p>
+        </div>
       </div>
-    </article>
+      <div class="swiper-slide">
+        <div class="project-card">
+          <img src="{% static 'img/projects/test1.jpg' %}" alt="Mural 2" />
+          <h3>Evento con la NBA</h3>
+          <p>Acuarela en directo durante el All-Star Weekend.</p>
+        </div>
+      </div>
+      <!-- Repetí más slides según tus proyectos -->
+    </div>
 
-    <!-- Más cards... -->
+    <!-- Botones -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </section>
 {% endblock %}
