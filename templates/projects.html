@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Projects | María
+Emege{% endblock %} {% block content %}
+<section class="projects">
+  <h1 class="projects__title">Proyectos destacados</h1>
+  <p class="projects__intro">
+    Campañas, murales, arte en vivo y colaboraciones con grandes marcas.
+  </p>
+
+  <div class="projects__grid">
+    <!-- Card de Proyecto -->
+    <article class="project-card">
+      <img
+        src="{% static 'img/projects/test1.jpg' %}"
+        alt="Residente"
+        class="project-card__img"
+      />
+      <div class="project-card__info">
+        <h2 class="project-card__title">
+          Tour <em>Las letras ya no importan</em>
+        </h2>
+        <p class="project-card__desc">painting live during the tour concerts</p>
+        <a href="#" class="project-card__link">More</a>
+      </div>
+    </article>
+
+    <!-- Más cards... -->
+  </div>
+</section>
+{% endblock %}
