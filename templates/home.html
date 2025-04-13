@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Home | María
+Emege{% endblock %} {% block content %}
+<section class="hero">
+  <div class="hero__video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/ERyB5jd0jUo?si=d9MDROZAltTXLdiC&autoplay=1&mute=1&loop=1&playlist=ERyB5jd0jUo&controls=0&modestbranding=1"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="hero__overlay">
+    <h1 class="hero__title">Art that moves people. Live. Real. Legendary.</h1>
+    <p class="hero__subtitle">
+      Desde la NBA hasta Adidas: María transforma momentos en experiencias
+      visuales inolvidables.
+    </p>
+    <a href="{% url 'projects' %}" class="hero__cta">Ver proyectos</a>
+  </div>
+</section>
+
+{% endblock %}
