@@ -5,29 +5,28 @@ Emege{% endblock %} {% block content %}
   <p class="projects__intro">
     Campañas, murales, arte en vivo y colaboraciones con grandes marcas.
   </p>
-
-  <div class="swiper-container">
+  <div class="swiper" id="main-swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="project-card">
-          <img src="{% static 'img/projects/test1.jpg' %}" alt="Mural 1" />
-          <h3>Mural en evento de Adidas</h3>
-          <p>Live painting durante el lanzamiento de nuevas zapatillas.</p>
-        </div>
+        <img src="{% static 'img/projects/test1.jpg' %}" alt="Slide 1" />
       </div>
       <div class="swiper-slide">
-        <div class="project-card">
-          <img src="{% static 'img/projects/test1.jpg' %}" alt="Mural 2" />
-          <h3>Evento con la NBA</h3>
-          <p>Acuarela en directo durante el All-Star Weekend.</p>
-        </div>
+        <img src="{% static 'img/projects/test2.jpg' %}" alt="Slide 2" />
       </div>
-      <!-- Repetí más slides según tus proyectos -->
+      <div class="swiper-slide">
+        <img src="{% static 'img/projects/test3.jpg' %}" alt="Slide 3" />
+      </div>
+      <div class="swiper-slide">
+        <img src="{% static 'img/projects/test4.jpg' %}" alt="Slide 4" />
+      </div>
     </div>
 
-    <!-- Botones -->
+    <!-- Botones de navegación -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
+
+    <!-- Scrollbar -->
+    <div class="swiper-scrollbar"></div>
   </div>
 </section>
 {% endblock %}

@@ -1,0 +1,112 @@
+#main-swiper {
+  margin: calc(36px + 5vw) auto;
+  max-width: 90vw;
+  z-index: 10;
+
+  .swiper-wrapper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+
+    img {
+      max-height: 70vh;
+      max-width: 90%;
+      border-radius: 12px;
+      margin: auto;
+      transition: all 0.3s ease;
+    }
+
+    &:not(.swiper-slide-active) img {
+      filter: brightness(0.6);
+      transform: scale(0.9);
+    }
+
+    &.swiper-slide-active img {
+      filter: none;
+      transform: scale(1);
+    }
+  }
+
+  // Navegación
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-50%);
+    background: none;
+    z-index: 11;
+
+    &::after {
+      content: "";
+      background: url("https://static.ecestaticos.com/file/7c0/b25/59a/7c0b2559a811a17aedea8b97e9fc3d30.svg")
+        center center no-repeat;
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 1vw;
+  }
+
+  .swiper-button-next {
+    right: 1vw;
+
+    &::after {
+      transform: scaleX(-1); // Gira la flecha hacia la derecha
+    }
+  }
+
+  // Scrollbar
+  .swiper-scrollbar {
+    background: rgba(0, 0, 0, 0.2);
+    height: 2px;
+    max-width: 500px;
+    margin: 30px auto 0;
+    position: relative;
+
+    .swiper-scrollbar-drag {
+      background-color: black;
+    }
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+  #main-swiper {
+    .swiper-slide img {
+      max-width: 100%;
+      max-height: 60vh;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 48px;
+      height: 48px;
+      top: auto;
+      bottom: 10px;
+      transform: none;
+      position: static;
+      margin: 0 10px;
+
+      &::after {
+        filter: invert(0);
+      }
+    }
+
+    .swiper-scrollbar {
+      max-width: 150px;
+      margin-bottom: 24px;
+    }
+  }
+}
