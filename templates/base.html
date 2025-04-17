@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{% sass_src 'scss/projects.scss' %}" />
     <link rel="stylesheet" href="{% sass_src 'scss/swiper.scss' %}" />
     <link rel="stylesheet" href="{% sass_src 'scss/contact.scss' %}" />
-
+    <link rel="stylesheet" href="{% sass_src 'scss/about.scss' %}" />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -45,5 +45,24 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{% static 'js/projects.js' %}"></script>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target); // Solo una vez
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      document
+        .querySelectorAll(".js-fade")
+        .forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>
