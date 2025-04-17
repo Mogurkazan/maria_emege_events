@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{% sass_src 'scss/swiper.scss' %}" />
     <link rel="stylesheet" href="{% sass_src 'scss/contact.scss' %}" />
     <link rel="stylesheet" href="{% sass_src 'scss/about.scss' %}" />
+    <link rel="stylesheet" href="{% sass_src 'scss/services.scss' %}" />
+    <link rel="stylesheet" href="{% sass_src 'scss/footer.scss' %}" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap"
       rel="stylesheet"
@@ -49,9 +52,28 @@
 
     <main>{% block content %}{% endblock %}</main>
 
-    <footer>
-      <p>&copy; 2025 María Emege. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p>&copy; {{ now|date:"Y" }} María Emege</p>
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/mariaemegestudio"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="{% static 'img/icon_instagram.png' %}" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mariaemege"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img src="{% static 'img/icon_linkedin.png' %}" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{% static 'js/projects.js' %}"></script>
     <script>
