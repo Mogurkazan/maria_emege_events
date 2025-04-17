@@ -17,8 +17,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%; // 👈 esto asegura que ocupe todo
-    max-width: 500px; // 👈 centrado con límite
+    // 👈 esto asegura que ocupe todo
+    max-width: 400px; // 👈 centrado con límite
     margin: 0 auto; // 👈 centrado horizontal
   }
 }
@@ -82,6 +82,7 @@
     height: auto;
     max-height: none;
     margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
   }
 
   .about-image img {
