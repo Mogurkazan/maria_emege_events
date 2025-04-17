@@ -140,3 +140,11 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # o el que uses
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'jacelrio@gmail.com'
+EMAIL_HOST_PASSWORD = 'fgpx hpeu xshn bzhg'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
