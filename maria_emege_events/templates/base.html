@@ -1,0 +1,49 @@
+{% load static sass_tags %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>María Emege Events</title>
+    <link rel="stylesheet" href="{% sass_src 'scss/style.scss' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">María Emege</h1>
+        <nav class="nav">
+          <ul>
+            <li><a href="#works">Obras</a></li>
+            <li><a href="#brands">Clientes</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <h2>Pintura en vivo · Murales · Ilustración</h2>
+        <p>Arte que conecta con marcas y personas</p>
+      </div>
+    </section>
+
+    <!-- Contenido -->
+    <main>{% block content %}{% endblock %}</main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        © {{ year|default:"2025" }} María Emege. Todos los derechos reservados.
+      </p>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
