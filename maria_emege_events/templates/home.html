@@ -1,25 +1,57 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load static %}
 
 <section id="works" class="section fade-in">
   <h2 class="section__title">Últimos proyectos</h2>
   <div class="gallery">
-    <div class="gallery__item fade-in">Obra 1</div>
-    <div class="gallery__item fade-in">Obra 2</div>
-    <div class="gallery__item fade-in">Obra 3</div>
+    <a href="#proyecto-residente" class="gallery__item fade-in">
+      <img
+        src="{% static 'img/maria_residente_1.jpeg' %}"
+        alt="Proyecto con Residente"
+        class="gallery__image"
+      />
+      <div class="gallery__caption">Proyecto con Residente</div>
+    </a>
+    <a href="#proyecto-residente" class="gallery__item fade-in">
+      <img
+        src="{% static 'img/maria_residente_1.jpeg' %}"
+        alt="Proyecto con Residente"
+        class="gallery__image"
+      />
+      <div class="gallery__caption">Proyecto con Residente</div>
+    </a>
+    <a href="#proyecto-residente" class="gallery__item fade-in">
+      <img
+        src="{% static 'img/maria_residente_1.jpeg' %}"
+        alt="Proyecto con Residente"
+        class="gallery__image"
+      />
+      <div class="gallery__caption">Proyecto con Residente</div>
+    </a>
   </div>
 </section>
 
 <section id="about" class="section section--grey fade-in">
-  <h2 class="section__title">Sobre María</h2>
-  <p class="about__text fade-in">
-    Artista visual con experiencia internacional en murales, campañas y pintura
-    en vivo.
-  </p>
-  <p class="about__text fade-in">
-    María ha trabajado en proyectos en España, UK, EEUU y gran parte de
-    Latinoamérica, destacando por su estilo único y el uso tanto de técnicas
-    tradicionales como nuevas.
-  </p>
+  <div class="about__grid">
+    <div class="about__left">
+      <h2 class="about__title">María Emegé</h2>
+      <p class="about__text">
+        Artista visual con experiencia internacional en murales, campañas y
+        pintura en vivo.
+      </p>
+      <p class="about__text">
+        María ha trabajado en proyectos en España, UK, EEUU y gran parte de
+        Latinoamérica, destacando por su estilo único y el uso tanto de técnicas
+        tradicionales como nuevas.
+      </p>
+    </div>
+    <div class="about__right">
+      <img
+        src="{% static 'img/maria_emegé.jpg' %}"
+        alt="Retrato profesional de María Emegé"
+        class="about__image"
+      />
+    </div>
+  </div>
 </section>
 
 {% endblock %}
