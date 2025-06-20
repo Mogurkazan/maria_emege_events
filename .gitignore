@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django staticfiles output
+/staticfiles/
+
+# SCSS compiled CSS (si accidentalmente generado)
+/static/**/*.css
+/static/**/*.map
+
+# VSCode / IDE / entorno local
+.vscode/
+.idea/
+
+# Archivos grandes locales
+/static/videos/maria_eventos.mp4
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
