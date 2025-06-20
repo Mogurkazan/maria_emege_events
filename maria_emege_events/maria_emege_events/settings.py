@@ -131,6 +131,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 
 SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
+SASS_PROCESSOR_ENABLED = True
+
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
